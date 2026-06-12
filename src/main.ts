@@ -1,12 +1,5 @@
 import './style.css'
-
-type Project = {
-  title: string;
-  description: string;
-  github_url: string | null;
-  web_url: string;
-  web_label?: string;
-};
+import { projects, type Project } from './projects'
 
 const appBody = document.querySelector<HTMLDivElement>('#app');
 
@@ -31,13 +24,7 @@ const renderProjectCard = (project: Project): string => {
   `;
 };
 
-const renderShowcase = async (): Promise<void> => {
-  const response = await fetch('/projects.json');
-  if (!response.ok) {
-    throw new Error(`Unable to load project data: ${response.status}`);
-  }
-
-  const projects = (await response.json()) as Project[];
+const renderShowcase = (): void => {
   const cards = projects.map(renderProjectCard).join('');
 
   appBody.innerHTML = `
@@ -57,7 +44,4 @@ const renderShowcase = async (): Promise<void> => {
   `;
 };
 
-renderShowcase().catch((error: unknown) => {
-  const message = error instanceof Error ? error.message : 'Unknown error';
-  appBody.innerHTML = `<p>Unable to render showcase: ${message}</p>`;
-});
+renderShowcase();
