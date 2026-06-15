@@ -8,16 +8,12 @@ if (!appBody) {
 }
 
 const renderProjectCard = (project: Project): string => {
-  const githubBadge = project.github_url
-    ? `<a class="link-badge" href="${project.github_url}" target="_blank" rel="noreferrer noopener">GitHub</a>`
-    : '';
-
   return `
     <section class="project-card">
       <h2>${project.title}</h2>
       <p>${project.description}</p>
       <div class="project-links">
-        ${githubBadge}
+        <a class="link-badge" href="${project.github_url}" target="_blank" rel="noreferrer noopener">GitHub</a>
         <a class="link-badge" href="${project.web_url}">${project.web_label ?? 'Open Project'}</a>
       </div>
     </section>
@@ -31,7 +27,6 @@ const renderShowcase = (): void => {
     <main class="showcase-page">
       <header class="showcase-header">
         <h1>Projects</h1>
-        <p>Showcase entries for projects I have developed.</p>
       </header>
       <section class="project-stack">
         ${cards}
