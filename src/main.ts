@@ -33,7 +33,7 @@ const renderShowcase = (): void => {
       </section>
       <footer class="showcase-footer">
         <p>Contact: <a href="mailto:snovakow@gmail.com">snovakow@gmail.com</a></p>
-        <a class="link-badge" href="/resume/">Resume</a>
+        <a class="link-badge" href="https://snovakow.com/resume/">Resume</a>
       </footer>
     </main>
   `;

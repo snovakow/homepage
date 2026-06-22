@@ -10,9 +10,9 @@ export const projects: Project[] = [
     {
         title: 'Tims Hockey Challenge Helper',
         description:
-            `App to help make Tim Hortons Hockey Challenge picks in the Tims app, 
-            a contest involving picking goal scorers in NHL games.
-            The app uses sportsbook implied probability odds to calculate the optimal picks.`,
+            `App to help make Tim Hortons Hockey Challenge picks in the Tims app. 
+            The Tim Hortons Hockey Challenge is a contest for picking goal scorers in NHL games.
+            The app uses sportsbook implied probability odds to calculate optimal picks.`,
         github_url: 'https://github.com/snovakow/timspicks',
         web_url: 'https://snovakow.com/timspicks/',
         web_label: 'Open App'
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     {
         title: 'Birthday',
         description:
-            `An age tracking app for my niece.`,
+            `An age tracking app made as a birthday gift.`,
         github_url: 'https://github.com/snovakow/birthday',
         web_url: 'https://snovakow.com/rayapapaya',
         web_label: 'Open App'
@@ -41,28 +41,4 @@ export const projects: Project[] = [
         web_url: 'https://snovakow.com/gameshow',
         web_label: 'Open App'
     },
-    {
-        title: 'Composer',
-        description:
-            `A 2D content creation tool in development.`,
-        github_url: 'https://github.com/snovakow/composer',
-        web_url: 'https://snovakow.com/composer',
-        web_label: 'Open App'
-    },
-    {
-        title: 'Greenscreen',
-        description:
-            `A greenscreen app in development.`,
-        github_url: 'https://github.com/snovakow/greenscreen',
-        web_url: 'https://snovakow.com/greenscreen',
-        web_label: 'Open App'
-    },
-    {
-        title: 'Bounder',
-        description:
-            `A walkable area exploration app in development.`,
-        github_url: 'https://github.com/snovakow/bounder',
-        web_url: 'https://snovakow.com/bounder',
-        web_label: 'Open App'
-    }
 ];
