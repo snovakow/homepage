@@ -15,7 +15,7 @@ export const projects: Project[] = [
             The app uses sportsbook implied probability odds to calculate optimal picks.`,
         github_url: 'https://github.com/snovakow/timspicks',
         web_url: 'https://snovakow.com/timspicks/',
-        info_url: './timspicks-details.html',
+        info_url: './homepage/timspicks-details.html',
     },
     {
         title: 'Sudoku',
@@ -23,7 +23,7 @@ export const projects: Project[] = [
             `A Sudoku app and strategy explorer. View the project details page for supported techniques and links to strategy-specific games.`,
         github_url: 'https://github.com/snovakow/sudoku',
         web_url: 'https://snovakow.com/sudoku',
-        info_url: './sudoku-details.html',
+        info_url: './homepage/sudoku-details.html',
     },
     {
         title: 'Birthday',
