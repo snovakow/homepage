@@ -14,7 +14,8 @@ const renderProjectCard = (project: Project): string => {
       <p>${project.description}</p>
       <div class="project-links">
         <a class="link-badge" href="${project.github_url}" target="_blank" rel="noreferrer noopener">GitHub</a>
-        <a class="link-badge" href="${project.web_url}">${project.web_label ?? 'Open Project'}</a>
+        <a class="link-badge" href="${project.web_url}">Open App</a>
+        ${project.info_url ? `<a class="link-badge" href="${project.info_url}">Info</a>` : ''}
       </div>
     </section>
   `;

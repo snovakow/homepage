@@ -2,170 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudoku Solver Details</title>
-  <style>
-    :root {
-      --text: #6b6375;
-      --text-h: #08060d;
-      --bg: #fff;
-      --border: #e5e4e7;
-      --badge-bg: rgba(170, 59, 255, 0.1);
-      --badge-border: rgba(170, 59, 255, 0.45);
-      --badge-text: #5a2099;
-      --shadow: rgba(0, 0, 0, 0.08) 0 10px 18px -8px;
-      --sans: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --text: #9ca3af;
-        --text-h: #f3f4f6;
-        --bg: #16171d;
-        --border: #2e303a;
-        --badge-bg: rgba(192, 132, 252, 0.15);
-        --badge-border: rgba(192, 132, 252, 0.5);
-        --badge-text: #d8b4fe;
-      }
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.55 var(--sans);
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 24px;
-      box-sizing: border-box;
-    }
-
-    h1 {
-      color: var(--text-h);
-      margin: 0 0 12px;
-      font-size: 2rem;
-      line-height: 1.1;
-    }
-
-    p {
-      margin: 0 0 16px;
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-      margin-bottom: 18px;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      border: 1px solid var(--badge-border);
-      background: var(--badge-bg);
-      color: var(--badge-text);
-      padding: 6px 12px;
-      font-size: 0.9rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .badge:hover {
-      transform: translateY(-1px);
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    iframe {
-      width: 100%;
-      min-height: 600px;
-      border: 0;
-      border-radius: 12px;
-      background: #fff;
-    }
-
-    .back-link {
-      margin-top: 6px;
-      display: inline-block;
-    }
-  </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="details.css">
+	<title>Sudoku Solver Details</title>
 </head>
 
 <body>
-  <main class="container">
-    <a class="badge back-link" href="/">Back to Showcase</a>
-    <h1>Sudoku Solver</h1>
-    <p>
-      This project helps solve Sudoku puzzles using progressive strategies, from foundational singles to advanced
-      fish patterns.
-    </p>
+	<main class="container">
+		<a class="badge back-link" href="/">Back to Projects</a>
+		<h1>Sudoku</h1>
+		<p>
+			This project generates sudoku puzzles. The app presents puzzles by required solving strategies.
+		</p>
 
-    <section class="card">
-      <h2>Open the Solver</h2>
-      <div class="badge-row">
-        <a class="badge" href="./sudoku/">Singles</a>
-      </div>
-    </section>
+		<section class="card">
+			<p class="p3">
+				<span class="s1">
+					<i>
+						“A sudoku puzzle is one of the deepest logical objects discovered in recent decades or rather
+						re-discovered, since it has been around from the time of Euler and for a while has existed
+						independently among popular puzzles in Japan. Its true depth, however, has been realized only at
+						start of 2005, when puzzle-solving minds had a chance to tackle high-quality examples published
+						in newspapers in the West. Solvers have been motivated by a desire to impose a logical solution
+						for any puzzle, but for every one felled with deft logic, more appear which defy any strategy.
+						Are we ever going to arrive at a Grand Theory of Sudoku? This is still a great unknown.”
+					</i>
+				</span>
+			</p>
+			<br>
+			<p class="p3"><span class="s1">- Andrew Stuart <a href="https://www.sudokuwiki.org/Introduction"><span
+							class="s3">(www.sudokuwiki.org/Introduction)</span></a></span></p>
+		</section>
 
-    <section class="card">
-      <h2>Strategy Links</h2>
-      <ul>
-        <li><a href="./sudoku/?strategy=naked2">Naked Pair</a></li>
-        <li><a href="./sudoku/?strategy=naked3">Naked Triple</a></li>
-        <li><a href="./sudoku/?strategy=naked4">Naked Quad</a></li>
-        <li><a href="./sudoku/?strategy=hidden1">Hidden Single</a></li>
-        <li><a href="./sudoku/?strategy=hidden2">Hidden Pair</a></li>
-        <li><a href="./sudoku/?strategy=hidden3">Hidden Triple</a></li>
-        <li><a href="./sudoku/?strategy=hidden4">Hidden Quad</a></li>
-        <li><a href="./sudoku/?strategy=omissions">Intersection Removal</a></li>
-        <li><a href="./sudoku/?strategy=uniqueRectangle">Deadly Pattern</a></li>
-        <li><a href="./sudoku/?strategy=yWing">Y Wing</a></li>
-        <li><a href="./sudoku/?strategy=xyzWing">XYZ Wing</a></li>
-        <li><a href="./sudoku/?strategy=xWing">X Wing</a></li>
-        <li><a href="./sudoku/?strategy=swordfish">Swordfish</a></li>
-        <li><a href="./sudoku/?strategy=jellyfish">Jellyfish</a></li>
-      </ul>
-      <div class="badge-row">
-        <a class="badge" href="./sudoku/about.html">About Sudoku Logic</a>
-      </div>
-    </section>
+		<section class="card">
+			<h2>Strategies</h2>
+			<p>Play puzzles solvable by the following strategies:</p>
+			<ul>
+				<li><a class="badge" href="https://snovakow.com/sudoku/">Singles</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=naked2">Naked Pair</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=naked3">Naked Triple</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=naked4">Naked Quad</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=hidden1">Hidden Single</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=hidden2">Hidden Pair</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=hidden3">Hidden Triple</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=hidden4">Hidden Quad</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=omissions">Intersection Removal</a>
+				</li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=uniqueRectangle">Deadly Pattern</a>
+				</li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=yWing">Y Wing</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=xyzWing">XYZ Wing</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=xWing">X Wing</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=swordfish">Swordfish</a></li>
+				<li><a class="badge" href="https://snovakow.com/sudoku/?strategy=jellyfish">Jellyfish</a></li>
+			</ul>
+			<div class="badge-row">
+				<a class="badge" href="https://snovakow.com/sudoku/about.html">Info</a>
+			</div>
+		</section>
 
-    <section class="card">
-      <h2>Inline Preview</h2>
-      <iframe id="sudoku-frame" src="./sudoku.html" title="Sudoku Preview"></iframe>
-    </section>
-  </main>
-
-  <script>
-    const iframe = document.getElementById('sudoku-frame');
-    iframe?.addEventListener('load', () => {
-      const doc = iframe.contentDocument;
-      if (!doc) return;
-      const margin = parseInt(window.getComputedStyle(doc.body).margin || '0', 10) || 0;
-      iframe.style.height = `${doc.body.scrollHeight + margin + margin}px`;
-    });
-  </script>
+	</main>
 </body>
 
 </html>

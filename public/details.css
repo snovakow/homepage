@@ -1,0 +1,118 @@
+:root {
+	--text: #6b6375;
+	--text-h: #08060d;
+	--bg: #fff;
+	--border: #e5e4e7;
+	--badge-bg: rgba(170, 59, 255, 0.1);
+	--badge-border: rgba(170, 59, 255, 0.45);
+	--badge-text: #5a2099;
+	--shadow: rgba(0, 0, 0, 0.08) 0 10px 18px -8px;
+	--sans: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #9ca3af;
+		--text-h: #f3f4f6;
+		--bg: #16171d;
+		--border: #2e303a;
+		--badge-bg: rgba(192, 132, 252, 0.15);
+		--badge-border: rgba(192, 132, 252, 0.5);
+		--badge-text: #d8b4fe;
+	}
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 16px/1.55 var(--sans);
+}
+
+.container {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 24px;
+	box-sizing: border-box;
+}
+
+h1 {
+	color: var(--text-h);
+	margin: 12px 0;
+	font-size: 2rem;
+	line-height: 1.1;
+}
+
+h2 {
+	margin: 0 0 12px 0;
+}
+
+p {
+	margin: 0 0 16px 0;
+}
+
+.card {
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	padding: 18px;
+	box-shadow: var(--shadow);
+	margin-bottom: 18px;
+}
+
+.badge-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 999px;
+	border: 1px solid var(--badge-border);
+	background: var(--badge-bg);
+	color: var(--badge-text);
+	padding: 6px 12px;
+	font-size: 0.9rem;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.badge:hover {
+	transform: translateY(-1px);
+}
+
+ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+.back-link {
+	margin-top: 6px;
+	display: inline-block;
+}
+
+p.p3 {
+	margin: 0.0px 0.0px 0.0px 0.0px;
+	font: 14.0px Times;
+}
+
+span.s1 {
+	font-kerning: none
+}
+
+span.s2 {
+	font: 12.0px Times;
+	font-kerning: none;
+}
+
+span.s3 {
+	font: 14.0px Times;
+	font-kerning: none;
+}

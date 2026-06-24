@@ -3,7 +3,7 @@ export type Project = {
     description: string;
     github_url: string;
     web_url: string;
-    web_label?: string;
+    info_url?: string;
 };
 
 export const projects: Project[] = [
@@ -15,15 +15,15 @@ export const projects: Project[] = [
             The app uses sportsbook implied probability odds to calculate optimal picks.`,
         github_url: 'https://github.com/snovakow/timspicks',
         web_url: 'https://snovakow.com/timspicks/',
-        web_label: 'Open App'
+        info_url: './timspicks-details.html',
     },
     {
         title: 'Sudoku',
         description:
-            `A Sudoku solver and strategy explorer. View the project details page for supported techniques and direct links to strategy-specific runs.`,
+            `A Sudoku app and strategy explorer. View the project details page for supported techniques and links to strategy-specific games.`,
         github_url: 'https://github.com/snovakow/sudoku',
-        web_url: './sudoku-details.html',
-        web_label: 'Project Details'
+        web_url: 'https://snovakow.com/sudoku',
+        info_url: './sudoku-details.html',
     },
     {
         title: 'Birthday',
@@ -31,7 +31,6 @@ export const projects: Project[] = [
             `An age tracking app made as a birthday gift.`,
         github_url: 'https://github.com/snovakow/birthday',
         web_url: 'https://snovakow.com/rayapapaya',
-        web_label: 'Open App'
     },
     {
         title: 'Monty Hall Problem',
@@ -39,6 +38,5 @@ export const projects: Project[] = [
             `A game show app in development, implementing the Monty Hall problem.`,
         github_url: 'https://github.com/snovakow/gameshow',
         web_url: 'https://snovakow.com/gameshow',
-        web_label: 'Open App'
     },
 ];
