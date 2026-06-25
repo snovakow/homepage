@@ -4,11 +4,11 @@ import { projects, type Project } from './projects'
 const appBody = document.querySelector<HTMLDivElement>('#app');
 
 if (!appBody) {
-  throw new Error('Missing #app element in index.html');
+	throw new Error('Missing #app element in index.html');
 }
 
 const renderProjectCard = (project: Project): string => {
-  return `
+	return `
     <section class="project-card">
       <h2>${project.title}</h2>
       <p>${project.description}</p>
@@ -22,9 +22,9 @@ const renderProjectCard = (project: Project): string => {
 };
 
 const renderShowcase = (): void => {
-  const cards = projects.map(renderProjectCard).join('');
+	const cards = projects.map(renderProjectCard).join('');
 
-  appBody.innerHTML = `
+	appBody.innerHTML = `
     <main class="showcase-page">
       <header class="showcase-header">
         <h1>Projects</h1>
