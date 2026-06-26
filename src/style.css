@@ -119,6 +119,10 @@ p {
   padding-bottom: 0;
 }
 
+.section-title {
+  margin: 0 0 2px;
+}
+
 .project-stack {
   display: flex;
   flex-direction: column;

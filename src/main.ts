@@ -27,14 +27,15 @@ const renderShowcase = (): void => {
 	appBody.innerHTML = `
     <main class="showcase-page">
       <header class="showcase-header">
-        <h1>Projects</h1>
+        <h1>Scott Novakowski</h1>
       </header>
-      <section class="project-stack">
+      <section class="project-stack" aria-label="Hobby projects">
+        <p><a class="link-badge" href="https://snovakow.com/resume/">Resume</a></p>
+        <h2 class="section-title">Hobby Projects</h2>
         ${cards}
       </section>
       <footer class="showcase-footer">
         <p>Contact: <a href="mailto:snovakow@gmail.com">snovakow@gmail.com</a></p>
-        <a class="link-badge" href="https://snovakow.com/resume/">Resume</a>
       </footer>
     </main>
   `;
