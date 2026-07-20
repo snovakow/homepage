@@ -1,12 +1,37 @@
 export type Project = {
     title: string;
     description: string;
-    github_url: string;
+    github_url?: string;
     web_url: string;
     info_url?: string;
+    linkText?: string;
+    additionalLinks?: { text: string; url: string }[];
 };
 
 export const projects: Project[] = [
+    {
+        title: 'Magic of Flight',
+        description:
+            `An interactive VR educational experience about the science of flight, 
+            designed for the Meta Quest headset. Runs in the browser via WebXR with no app install required. 
+            Winner of three 2021 WebXR Poly Awards: Education Experience, Video Experience, and Experience of the Year.`,
+        web_url: 'https://liquidcinemavr.com/fly/',
+        linkText: 'Open Experience',
+    },
+    {
+        title: '3D Anatomy Atlas',
+        description:
+            `An interactive 3D human anatomy atlas built on Zygote's medical-grade models. 
+            Released for iPhone, iPad, and web, as part of the University of Calgary's Lindsay Project.`,
+        web_url: 'https://lindsayvirtualhuman.com/?p=273',
+        linkText: 'Project Archive',
+        additionalLinks: [
+            { text: 'Demo Video (1)', url: 'https://www.youtube.com/watch?v=3MZps2_Z1zo' },
+            { text: 'Demo Video (2)', url: 'https://www.youtube.com/watch?v=38d7P3JB4SE' },
+            { text: 'Demo Video (3)', url: 'https://www.youtube.com/watch?v=M0xubQ0_5Q0' },
+            { text: 'CBC News', url: 'https://www.cbc.ca/news/canada/calgary/new-medical-tool-honours-u-of-c-student-s-memory-1.1240316' },
+        ],
+    },
     {
         title: 'Tims Hockey Challenge Helper',
         description:
