@@ -22,9 +22,10 @@ export const projects: Project[] = [
         title: '3D Anatomy Atlas',
         description:
             `An interactive 3D human anatomy atlas built on Zygote's medical-grade models. 
-            Released for iPhone, iPad, and web, as part of the University of Calgary's Lindsay Project.`,
+            Released for iPhone, iPad, and web, as part of the University of Calgary's Lindsay Project.
+            No longer active; archival information and demo links are still available.`,
         web_url: 'https://lindsayvirtualhuman.com/?p=273',
-        linkText: 'Project Archive',
+        linkText: 'App Overview',
         additionalLinks: [
             { text: 'Demo Video (1)', url: 'https://www.youtube.com/watch?v=3MZps2_Z1zo' },
             { text: 'Demo Video (2)', url: 'https://www.youtube.com/watch?v=38d7P3JB4SE' },
