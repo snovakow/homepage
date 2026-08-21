@@ -27,9 +27,9 @@ export const projects: Project[] = [
         web_url: 'https://lindsayvirtualhuman.com/?p=273',
         linkText: 'App Overview',
         additionalLinks: [
-            { text: 'Demo Video (1)', url: 'https://www.youtube.com/watch?v=3MZps2_Z1zo' },
-            { text: 'Demo Video (2)', url: 'https://www.youtube.com/watch?v=38d7P3JB4SE' },
-            { text: 'Demo Video (3)', url: 'https://www.youtube.com/watch?v=M0xubQ0_5Q0' },
+            { text: 'Demo Video: Intro', url: 'https://www.youtube.com/watch?v=3MZps2_Z1zo' },
+            { text: 'Demo Video: Rendering', url: 'https://www.youtube.com/watch?v=38d7P3JB4SE' },
+            { text: 'Demo Video: Slice Tool', url: 'https://www.youtube.com/watch?v=M0xubQ0_5Q0' },
             { text: 'CBC News', url: 'https://www.cbc.ca/news/canada/calgary/new-medical-tool-honours-u-of-c-student-s-memory-1.1240316' },
         ],
     },

@@ -35,6 +35,7 @@ const renderShowcase = (): void => {
 <main class="showcase-page">
 	<header class="showcase-header">
 		<h1>Scott Novakowski</h1>
+		<p class="subtitle">Software Engineer</p>
 	</header>
 	<section class="project-stack" aria-label="App portfolio">
 		<p><a class="link-badge" href="https://snovakow.com/resume/">Resume</a></p>
