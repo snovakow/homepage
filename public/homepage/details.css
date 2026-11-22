@@ -98,6 +98,77 @@ li {
 	display: inline-block;
 }
 
+.intro-links {
+	margin: 0 0 18px 0;
+}
+
+.card > :last-child,
+.card > ul:last-child > li:last-child {
+	margin-bottom: 0;
+}
+
+.text-link {
+	color: var(--badge-text);
+}
+
+code {
+	white-space: nowrap;
+}
+
+.data-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 16px 0;
+	text-align: left;
+}
+
+.data-table caption {
+	text-align: left;
+	font-weight: 600;
+	padding-bottom: 8px;
+}
+
+.data-table th,
+.data-table td {
+	border: 1px solid var(--border);
+	padding: 6px 10px;
+}
+
+.data-table th {
+	color: var(--text-h);
+}
+
+/* A table too wide for a phone scrolls inside its card rather than spilling out of it */
+.table-scroll {
+	overflow-x: auto;
+	margin: 0 0 16px 0;
+}
+
+.table-scroll > .data-table {
+	margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+	.data-table {
+		font-size: 0.875rem;
+	}
+
+	.data-table th,
+	.data-table td {
+		padding: 6px;
+	}
+
+	/* For tables with many columns, so they fit across most phones without scrolling */
+	.data-table.dense {
+		font-size: 0.8125rem;
+	}
+
+	.data-table.dense th,
+	.data-table.dense td {
+		padding: 6px 4px;
+	}
+}
+
 p.p3 {
 	margin: 0.0px 0.0px 0.0px 0.0px;
 	font: 14.0px Times;
