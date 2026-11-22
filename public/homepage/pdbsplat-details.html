@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Proteins from the Protein Data Bank, rendered in the browser as Gaussian splats." />
+	<link rel="stylesheet" href="details.css">
+	<title>PDBSplat Details</title>
+</head>
+
+<body>
+	<main class="container">
+		<a class="badge back-link" href="/">Back to Projects</a>
+		<h1>PDBSplat</h1>
+		<p>
+			Proteins from the Protein Data Bank, rendered in the browser as Gaussian splats.
+			Each atom becomes a soft blob of colour at its place in the structure,
+			so a protein reads as a cloud of matter rather than as balls and sticks.
+		</p>
+		<div class="badge-row intro-links">
+			<a class="badge" href="https://snovakow.com/pdbsplat/">Open App</a>
+			<a class="badge" href="https://github.com/snovakow/PDBSplat">GitHub</a>
+		</div>
+
+		<section class="card">
+			<h2>Examples</h2>
+			<p>
+				The app opens on crambin, and its panel lists five more examples, from small to large.
+				Any other entry in the Protein Data Bank loads by its four-character ID.
+			</p>
+			<ul>
+				<li><b>1CRN</b>: crambin, a small plant protein of 327 atoms</li>
+				<li><b>1BNA</b>: a short stretch of DNA</li>
+				<li><b>1EJG</b>: crambin again, with its hydrogens, alternate conformations and the directions each atom moves in</li>
+				<li><b>1D3Z</b>: ubiquitin, as solved by NMR, in several models</li>
+				<li><b>4HHB</b>: human haemoglobin</li>
+				<li><b>1IGT</b>: an intact mouse antibody of almost 13,000 atoms, four protein chains in a Y</li>
+			</ul>
+		</section>
+
+		<section class="card">
+			<h2>Styles</h2>
+			<ul>
+				<li>
+					<b>Splats</b>: soft Gaussian blobs, each sized by its element's van der Waals radius,
+					with a Hardness control that firms their edges from a soft falloff to a flat disc.
+				</li>
+				<li>
+					<b>Spheres</b>: hard-edged splats shaded as spheres.
+					At full size and opacity they make a space-filling model, cutting into one another along curved creases.
+				</li>
+				<li>
+					<b>Surface</b>: a smooth molecular surface, meshed by marching cubes in a background thread,
+					on which the atoms' colours meet along clean boundaries.
+				</li>
+				<li>
+					<b>Field</b>: the atoms' density, ray-marched as a cloud,
+					denser where atoms crowd and fading away at the structure's edge.
+				</li>
+			</ul>
+		</section>
+
+		<section class="card">
+			<h2>Colour and Detail</h2>
+			<ul>
+				<li>
+					<b>Colour</b> by element, by chain, by B-factor, which says how far each atom moves about its place,
+					by a rainbow along each chain, or by secondary structure.
+					Burial darkens each atom by how deeply the atoms around it bury it.
+				</li>
+				<li>
+					<b>Point at an atom</b> to name it, with its residue, chain, B-factor and occupancy,
+					and pick it to focus on its residue or chain.
+				</li>
+				<li>
+					<b>NMR models</b> show the first, all of them at once, so that where they disagree reads as a cloud,
+					or each in turn as an animation.
+				</li>
+				<li>
+					<b>Thermal motion</b> blurs each atom by its B-factor,
+					or draws it as its thermal ellipsoid, stretched along the way it moves most where the entry records that.
+				</li>
+				<li>
+					<b>Levels of detail</b> merge the atoms into one blob per residue or per chain as you zoom out.
+				</li>
+				<li>
+					<b>Focus</b> on the ligands and the residues that hold them, or on the backbone, and fade the rest.
+				</li>
+				<li>
+					<b>Blend</b> each splat over what's behind it, as a glow that reads like an X-ray,
+					or weighted, so nothing depends on the order the splats are drawn in.
+				</li>
+				<li>
+					<b>Scene effects</b>: a depth cue, a clipping plane to see inside, bloom, and ambient occlusion.
+				</li>
+			</ul>
+		</section>
+
+		<section class="card">
+			<h2>Built With</h2>
+			<p>
+				TypeScript, React, three.js and React Three Fiber, built with Vite.
+				The splats are drawn by three.js's WebGPU-based Gaussian splat rendering,
+				with a WebGL 2 fallback in browsers without WebGPU or on GPUs where it fails.
+				Entries are fetched from the RCSB as mmCIF files and read by the app's own parser.
+			</p>
+		</section>
+
+		<section class="card">
+			<h2>Credits</h2>
+			<p>
+				Protein structures come from the
+				<a class="text-link" href="https://www.rcsb.org">RCSB Protein Data Bank</a>.
+				The element colours are Jmol's CPK palette, and the van der Waals radii are mostly A. Bondi's (1964).
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>

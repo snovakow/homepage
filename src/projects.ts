@@ -54,15 +54,52 @@ export const projects: Project[] = [
     {
         title: 'Birthday',
         description:
-            `An age tracking app made as a birthday gift.`,
+            `An age tracking app made as a birthday gift.
+            It shows an age counted live in years, months, weeks, days, hours, minutes and seconds,
+            and in years to eight decimal places.`,
         github_url: 'https://github.com/snovakow/birthday',
-        web_url: 'https://snovakow.com/rayapapaya',
+        web_url: 'https://snovakow.com/rayapapaya/',
     },
     {
         title: 'Monty Hall Problem',
         description:
-            `A game show app in development, implementing the Monty Hall problem.`,
+            `A 3D game show in the browser, played on the Monty Hall problem: three crates, one prize,
+            and the question of whether to switch.
+            A host runs the show round after round, a studio audience cheers along,
+            and a show can be sent to someone as a gift link.`,
         github_url: 'https://github.com/snovakow/gameshow',
-        web_url: 'https://snovakow.com/gameshow',
+        web_url: 'https://snovakow.com/gameshow/',
+        info_url: './homepage/gameshow-details.html',
+    },
+    {
+        title: 'PDBSplat',
+        description:
+            `Proteins from the Protein Data Bank, rendered in the browser as Gaussian splats with three.js on WebGPU.
+            Any entry loads by its PDB ID, drawn as soft splats, shaded spheres, a molecular surface or a density cloud,
+            and coloured by element, chain, mobility or secondary structure.`,
+        github_url: 'https://github.com/snovakow/PDBSplat',
+        web_url: 'https://snovakow.com/pdbsplat/',
+        info_url: './homepage/pdbsplat-details.html',
+    },
+    {
+        title: 'VisibleHuman',
+        description:
+            `The Visible Human Project's male and female bodies and its head, in 3D in the browser,
+            rebuilt from thousands of photographed cross-sections and their CT scans.
+            Turn them, cut them open, and see them as splats, an X-ray, traced surfaces or meshes.`,
+        github_url: 'https://github.com/snovakow/VisibleHuman',
+        web_url: 'https://snovakow.com/visiblehuman/',
+        info_url: './homepage/visiblehuman-details.html',
+    },
+    {
+        title: 'Greenscreen',
+        description:
+            `A chroma key library for the browser, on WebGPU or WebGL2.
+            It keys as OBS Studio's chroma key filter does and takes its settings in OBS's units,
+            so a key tuned in OBS copies across as it is.
+            It has no dependencies, and works from plain JavaScript, TypeScript, React and three.js.`,
+        github_url: 'https://github.com/snovakow/greenscreen',
+        web_url: 'https://www.npmjs.com/package/@snovakow/greenscreen',
+        linkText: 'npm',
     },
 ];

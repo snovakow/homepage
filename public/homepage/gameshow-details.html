@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="A 3D game show in the browser on the Monty Hall problem: pick one of three crates, stay or switch, and send a show to someone as a gift link." />
+	<link rel="stylesheet" href="details.css">
+	<title>Monty Hall Problem Details</title>
+</head>
+
+<body>
+	<main class="container">
+		<a class="badge back-link" href="/">Back to Projects</a>
+		<h1>Monty Hall Problem</h1>
+		<p>
+			A 3D game show in the browser, played on the Monty Hall problem:
+			three crates, one prize, and the question of whether to switch.
+		</p>
+		<div class="badge-row intro-links">
+			<a class="badge" href="https://snovakow.com/gameshow/">Open App</a>
+			<a class="badge" href="https://snovakow.com/gameshow/#setup">Make a Show as a Gift</a>
+			<a class="badge" href="https://github.com/snovakow/gameshow">GitHub</a>
+		</div>
+
+		<section class="card">
+			<h2>The Problem</h2>
+			<p>
+				You pick one of three crates, and one of them holds a prize.
+				The host, who knows where the prize is, then opens one of the other two, always an empty one,
+				and offers you the choice: stay with your pick, or switch to the other closed crate.
+			</p>
+			<p>
+				Switching wins two times in three.
+				Your first pick is right only one time in three, and when it's wrong,
+				the host has to leave the prize in the crate you'd switch to.
+			</p>
+			<table class="data-table">
+				<caption>You pick crate 1</caption>
+				<thead>
+					<tr>
+						<th scope="col">Prize in</th>
+						<th scope="col">Host opens</th>
+						<th scope="col">Stay</th>
+						<th scope="col">Switch</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Crate 1</td>
+						<td>Crate 2 or 3</td>
+						<td>Wins</td>
+						<td>Loses</td>
+					</tr>
+					<tr>
+						<td>Crate 2</td>
+						<td>Crate 3</td>
+						<td>Loses</td>
+						<td>Wins</td>
+					</tr>
+					<tr>
+						<td>Crate 3</td>
+						<td>Crate 2</td>
+						<td>Loses</td>
+						<td>Wins</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				The puzzle is named for Monty Hall, the original host of the TV game show <i>Let's Make a Deal</i>.
+				It became famous in 1990, when Marilyn vos Savant answered it in <i>Parade</i> magazine,
+				and thousands of readers wrote in to insist the answer was wrong.
+			</p>
+		</section>
+
+		<section class="card">
+			<h2>The Show</h2>
+			<ul>
+				<li>
+					<b>A host</b> runs the show round after round: she welcomes you, explains the rules,
+					announces each round's prize, opens an empty crate and offers you the switch.
+					She dances when you win and sulks when you lose.
+				</li>
+				<li>
+					<b>A tab</b> adds up what you win, and keeps count of how staying and switching have each paid off.
+				</li>
+				<li>
+					<b>A simpler game</b> is a straight pick of one crate in three.
+				</li>
+				<li>
+					<b>Shows as gifts.</b> Make a show for someone, with a greeting to them in lights over the stage
+					and the winnings kept within a range you choose, and send it to them as a link.
+					Everything about a gift lives in the link itself, so nothing is stored on a server.
+				</li>
+				<li>
+					<b>A studio audience</b> murmurs, applauds, cheers and groans along.
+				</li>
+				<li>
+					<b>A night studio</b> under spotlights, with a glossy floor that reflects the stage and beams of light through a haze.
+					A win sets off confetti and jets of flame, and the finale ends in fireworks.
+					The confetti and the fireworks are moved by the graphics card, thousands of pieces at a time.
+				</li>
+				<li>
+					<b>Made for phones first</b>, with buttons big enough for a thumb and a layout for each way the phone is held.
+				</li>
+			</ul>
+		</section>
+
+		<section class="card">
+			<h2>Built With</h2>
+			<p>
+				TypeScript, React, three.js and React Three Fiber, built with Vite.
+				The effects are written for three.js's WebGPU renderer, in its node materials and compute passes,
+				and drawn with WebGL 2 on every device, or with WebGPU itself by adding <code>?webgpu</code> to the address.
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
